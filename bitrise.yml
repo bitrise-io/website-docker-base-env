@@ -1,0 +1,14 @@
+format_version: 1.2.0
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  test:
+    steps:
+    - script:
+        title: Docker rebuild
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+
+            docker build --no-cache --pull .

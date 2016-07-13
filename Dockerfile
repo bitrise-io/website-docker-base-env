@@ -26,7 +26,7 @@ RUN cd ruby-2.3.1 && ./configure --prefix=/usr/local && make && make install
 RUN rm -rf ruby-2.3.1
 RUN rm ruby-2.3.1.tar.gz
 
-RUN gem install bundler --no-document
+RUN gem install bundler --version "=1.10.0" --no-document
 
 # NodeJS
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev

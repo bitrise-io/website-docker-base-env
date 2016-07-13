@@ -29,12 +29,15 @@ RUN cd ruby-2.3.1 && ./configure --prefix=/usr/local && make && make install
 RUN rm -rf ruby-2.3.1
 RUN rm ruby-2.3.1.tar.gz
 
-RUN gem install bundler --version "=1.10.0" --no-document
-
 # NodeJS
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 RUN apt-get update -qq && apt-get install -y nodejs libfontconfig
 
+
+# ------------------------------------------------------
+# --- Tools installed through Ruby gems, NPM, ...
+
 # PhantomJS
 RUN npm install -g phantomjs@1.9
+RUN gem install bundler --version "=1.10.0" --no-document

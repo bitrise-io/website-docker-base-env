@@ -12,6 +12,9 @@ ENV LC_ALL "en_US.UTF-8"
 RUN dpkg-reconfigure --frontend=noninteractive locales
 # RUN update-locale LANG="en_US.UTF-8"
 
+# Essentials
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential wget curl
+
 # ------------------------------------------------------
 # --- Pre-installed but not through apt-get
 

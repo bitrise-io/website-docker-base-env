@@ -44,7 +44,7 @@ workflows:
             set -ex
             if [ -z "$DOCKER_IMAGE_DEPLOY_TAG" ] ; then
               echo " (i) DOCKER_IMAGE_DEPLOY_TAG not defined, generating one"
-              envman add --key 'DOCKER_IMAGE_DEPLOY_TAG' --value "$(date +%Y_%m_%d-%H_%M)"
+              envman add --key 'DOCKER_IMAGE_DEPLOY_TAG' --value "v$(date +%Y_%m_%d-%H_%M)"
             fi
 
   deploy:

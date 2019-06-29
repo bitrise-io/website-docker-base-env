@@ -64,4 +64,4 @@ RUN apt-get update -qq && apt-get install -y nodejs libfontconfig
 
 # PhantomJS
 RUN npm install -g phantomjs@1.9
-RUN gem install bundler --version "=1.12.4" --no-document
+RUN gem install bundler --version "=1.17.3" --no-document

@@ -57,7 +57,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
 # NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_${TOOL_VER_NODEJS}.x | sudo -E bash -
 RUN apt-get update -qq && apt-get install -y nodejs libfontconfig
-
+# Timezones
+RUN DEBIAN_FRONTEND=noninteractive apt-get install tzdata
 
 # ------------------------------------------------------
 # --- Tools installed through Ruby gems, NPM, ...

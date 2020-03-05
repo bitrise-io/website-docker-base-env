@@ -19,7 +19,7 @@ ENV LANG="en_US.UTF-8" \
     LC_ALL="en_US.UTF-8" \
 # Tool versions
     TOOL_VER_RUBY="2.5.7" \
-    TOOL_VER_NODEJS="6"
+    TOOL_VER_NODEJS="12"
 
 RUN dpkg-reconfigure --frontend=noninteractive locales
 # RUN update-locale LANG="en_US.UTF-8"
@@ -63,5 +63,5 @@ RUN apt-get update -qq && apt-get install -y nodejs libfontconfig
 # --- Tools installed through Ruby gems, NPM, ...
 
 # PhantomJS
-RUN npm install -g phantomjs@1.9
+RUN npm install -g phantomjs@1.9 --unsafe-perm
 RUN gem install bundler --version "=1.17.3" --no-document

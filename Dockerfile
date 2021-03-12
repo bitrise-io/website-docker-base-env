@@ -18,7 +18,7 @@ ENV LANG="en_US.UTF-8" \
     LANGUAGE="en_US.UTF-8" \
     LC_ALL="en_US.UTF-8" \
 # Tool versions
-    TOOL_VER_RUBY="2.5.7" \
+    TOOL_VER_RUBY="2.6.6" \
     TOOL_VER_NODEJS="12"
 
 RUN dpkg-reconfigure --frontend=noninteractive locales

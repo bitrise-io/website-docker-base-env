@@ -65,4 +65,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install tzdata
 
 # PhantomJS
 RUN npm install -g phantomjs@1.9 --unsafe-perm
-RUN gem install bundler --version "=1.17.3" --no-document
+RUN gem install bundler --version "=2.2.21" --no-document
